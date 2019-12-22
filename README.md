@@ -142,6 +142,52 @@ The sketch is setup to control D-O using the following controls:
 - **Press Button (Square)** - Activate a sound on PIN A5
 - **Press Button (Cross)** - Activate a sound on PIN A4
 
+## Errors
+
+### ERROR: `no matching function for call to 'Debouncer<Clock::Millis>::set_callback(void (&)(int))'`
+
+### Solution:
+
+You need to edit the `Yet_Another_Arduino_Debounce_Library/src/YetAnotherDebouncer.h` file.  Simply change `bool` to `int` on line 16:
+
+```
+// Old code
+template<typename clock=Clock::Millis, typename value_t=bool>
+```
+
+```
+// New code
+template<typename clock=Clock::Millis, typename value_t=int>
+```
+
+### ERROR: Forward and Backward doesn't work on my D-O, it moves so slowly
+
+### Solution:
+
+The ServoEasing library defaults to different servos that have a smaller range than the FS5103R/FS5106R.  You need to increase this range.  The FS5103R/FS5106R range from 500-2500µs (or +1000µs from center and -1000µs from center), so change lines 207-215 in `Arduino/libraries/ServoEasing/src/ServoEasing.h` to the values to match the FS5103R/FS5106R:
+
+```
+/*
+ * Definitions here are only for convenience. You may freely modify them.
+ */
+#define MICROSECONDS_FOR_ROTATING_SERVO_CLOCKWISE_MAX (MICROSECONDS_FOR_ROTATING_SERVO_STOP - 1000)
+#define MICROSECONDS_FOR_ROTATING_SERVO_CLOCKWISE_HALF (MICROSECONDS_FOR_ROTATING_SERVO_STOP - 500)
+#define MICROSECONDS_FOR_ROTATING_SERVO_CLOCKWISE_QUARTER (MICROSECONDS_FOR_ROTATING_SERVO_STOP - 250)
+#define MICROSECONDS_FOR_ROTATING_SERVO_COUNTER_CLOCKWISE_MAX (MICROSECONDS_FOR_ROTATING_SERVO_STOP + 1000)
+#define MICROSECONDS_FOR_ROTATING_SERVO_COUNTER_CLOCKWISE_HALF (MICROSECONDS_FOR_ROTATING_SERVO_STOP + 500)
+#define MICROSECONDS_FOR_ROTATING_SERVO_COUNTER_CLOCKWISE_QUARTER (MICROSECONDS_FOR_ROTATING_SERVO_STOP + 250)
+```
+
+### ERROR: When I move the controller, there is a delay before D-O moves
+
+### Solution:
+
+This is caused from the debouncing library.  It only sends a signal to the servo once a value (like a joystick movement) has registered as the same value for longer than a threshold time.  You can set this threshold time in `PadawanPS4.ino` on line 229:
+
+```
+const int debounce = 50; // time in milliseconds to wait until we send a signal to a servo
+```
+
 ## Help
 If you need any help, send an email to redheadedstep@me.com or create an issue on the repository.  
 
