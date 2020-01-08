@@ -9,6 +9,10 @@ Padawan PS4 is a set of Arduino Sketches that work to control different droids. 
 ## PS4BT Sketch
 This sketch is pulled from the USB Host Shield project here: https://github.com/felis/USB_Host_Shield_2.0.  It is a basic sketch that lets you verify that your controller is connected and all the joysticks and buttons are working.
 
+## Wiring Diagram
+Check in the D-O folder for a wiring diagram.  I am using a Matek Power Distribution Board to keep the wires cleaner.
+![D-O wiring diagram](https://raw.githubusercontent.com/redheadedstep/padawanps4/master/D-O/WiringDiagram.jpg)
+
 ## Hardware
 
 You will need the following hardware in your D-O:
