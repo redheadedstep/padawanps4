@@ -35,8 +35,8 @@ void setup()
   
   Serial.println(F("DFRobot DFPlayer Mini Demo"));
   Serial.println(F("Initializing DFPlayer ... (May take 3~5 seconds)"));
-  
-  if (!myDFPlayer.begin(mySoftwareSerial)) {  //Use softwareSerial to communicate with mp3.
+  myDFPlayer.setTimeOut(2000);
+  if (!myDFPlayer.begin(mySoftwareSerial, true, false)) {  //Use softwareSerial to communicate with mp3.
     Serial.println(F("Unable to begin:"));
     Serial.println(F("1.Please recheck the connection!"));
     Serial.println(F("2.Please insert the SD card!"));
@@ -47,8 +47,6 @@ void setup()
   Serial.println(F("DFPlayer Mini online."));
   myDFPlayer.volume(20);  //Set volume value. From 0 to 30
   myDFPlayer.play(file_num);  //Play the first mp3
-  Serial.print(F("File count: "));
-  Serial.println(myDFPlayer.readFileCounts());
 }
 
 void loop()
@@ -68,6 +66,7 @@ void loop()
           myDFPlayer.play(file_num);
         }
         Serial.println(F("Player available..."));
+        printDetail(myDFPlayer.readType(), file_num);
   }
 }
 
@@ -81,6 +80,7 @@ void printDetail(uint8_t type, int value){
       break;
     case DFPlayerCardInserted:
       Serial.println(F("Card Inserted!"));
+      myDFPlayer.next();
       break;
     case DFPlayerCardRemoved:
       Serial.println(F("Card Removed!"));
