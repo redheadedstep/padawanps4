@@ -14,7 +14,7 @@ To load the files, follow these instructions:
 - Copy all the MP3 files to the `mp3` folder
 - Name all the MP3 files as `0001.mp3`, `0002.mp3`, etc
 
-![MP3 Folder](https://raw.githubusercontent.com/redheadedstep/padawanps4/master/General/MP3/MP3_Folder.png)
+![MP3 Folder](https://raw.githubusercontent.com/redheadedstep/padawanps4/master/General/MP3/MP3_Folder_1.png)
 
 ## Connect the board
 Connect the board with the following pins:
@@ -26,7 +26,7 @@ Connect the board with the following pins:
 - Speaker Pin #1 => Speaker+
 - Speaker Pin #2 => Speaker-
 
-![DFPlayer Mini Pins](https://raw.githubusercontent.com/redheadedstep/padawanps4/master/General/MP3/DFPlayer_Mini_Pin.png)
+![DFPlayer Mini Pins](https://raw.githubusercontent.com/redheadedstep/padawanps4/master/General/MP3/DFPlayer_Mini_Pin_1.png)
 
 ## Troubleshooting
 ### Timeouts or nothing plays
