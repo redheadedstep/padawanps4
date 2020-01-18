@@ -6,7 +6,7 @@ to connect the PS4 controller to your Arduino
 Load the sketch onto your Arduino and open the Serial Monitor.  You should see the controller pair and will see output whenever
 you press a button or joystick.
 
-![PS4 Serial](https://raw.githubusercontent.com/redheadedstep/padawanps4/master/General/PS4/PS4_Serial.jpg)
+![PS4 Serial](https://raw.githubusercontent.com/redheadedstep/padawanps4/master/General/PS4/PS4_Serial.png)
 
 ## Pairing
 To pair the PS4 controller, hold down the *Share* + *PS* Buttons.  The light will blink white rapidly, then turn blue when it 
