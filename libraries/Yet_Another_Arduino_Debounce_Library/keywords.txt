@@ -1,0 +1,27 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Clock	KEYWORD1
+Millis	LITERAL1
+Micros	LITERAL1
+Debouncer	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+end	KEYWORD2
+set_callback	KEYWORD2
+wait_time	KEYWORD2
+set_value	KEYWORD2
+flush	KEYWORD2
+set_debounce	KEYWORD2
+set_debounce_stable	KEYWORD2
+set_debounce_fast	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
