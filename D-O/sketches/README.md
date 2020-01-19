@@ -39,6 +39,7 @@ Before you start, you need to install some libraries.  Open your Arduino IDE and
 - Adafruit PWM Servo Driver Library by Adafruit 
 - Yet Another Arduino Debounce Library by Paulo Costa
 - USB Host Shield Library 2.0 by Oleg Mazurov (Circuits@Home)
+- DFRobotDFPlayerMini by DFRobot
 
 Once you have installed the library, you should be able to run the sketch.
 
@@ -137,10 +138,16 @@ The sketch is setup to control D-O using the following controls:
 - **Tilt Controller Left** - Head tilts left (cocks the head left, like in the movie)
 - **Tilt Controller Right** - Head tilts right (cocks the head right, like in the movie)
 
-- **Press Button (Circle)** - Activate a sound on PIN A0
-- **Press Button (Triangle)** - Activate a sound on PIN A1
-- **Press Button (Square)** - Activate a sound on PIN A5
-- **Press Button (Cross)** - Activate a sound on PIN A4
+- **Press Button (Circle)** - Activate a sound
+- **Press Button (Triangle)** - Activate a sound
+- **Press Button (Square)** - Activate a sound
+- **Press Button (Cross)** - Activate a sound
+
+- **Press Button (Up)** - Toggle first group of sounds
+- **Press Button (Down)** - Toggle second group of sounds
+- **Press Button (Left)** - Toggle third group of sounds
+- **Press Button (Right)** - Toggle fourth group of sounds
+
 
 ## Help
 If you need any help, send an email to redheadedstep@me.com or create an issue on the repository.  
