@@ -198,5 +198,13 @@ const int debounce = 50; // time in milliseconds to wait until we send a signal 
 ## Help
 If you need any help, send an email to redheadedstep@me.com or create an issue on the repository.  
 
-## Credits
-Credit goes to Kristian Lauszus (kristianl@tkjelectronics.com) for creating the PS4 library for the USB Host Shield, Mr Baddeley for the 3-D files for D-O, authors of the various libraries, and you for building a droid!
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Kristian Lauszus (kristianl@tkjelectronics.com) for creating the PS4 library for the USB Host Shield
+* Mr Baddeley for the 3-D files for D-O
+* Authors of the various libraries
+* You for building a droid
