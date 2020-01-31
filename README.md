@@ -1,4 +1,7 @@
 # Padawan PS4
+![GitHub last commit](https://img.shields.io/github/last-commit/redheadedstep/padawanps4)
+![GitHub](https://img.shields.io/github/license/redheadedstep/padawanps4)
+
 Padawan PS4 is a set of Arduino Sketches that work to control different droids.  Right now, it just has sketches for connecting to the PS4 Controller and controller D-O.  D-O is 3D printed from plans from Mr Baddeley.
 
 ## Setup
