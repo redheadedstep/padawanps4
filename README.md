@@ -200,7 +200,7 @@ If you need any help, send an email to redheadedstep@me.com or create an issue o
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/redheadedstep/padawanps4/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/redheadedstep/padawanps4/blob/master/LICENSE.md) file for details
 
 ## Acknowledgments
 
